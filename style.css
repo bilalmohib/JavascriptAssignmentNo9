@@ -1,0 +1,90 @@
+#container
+{
+    display: flex;
+    flex-direction: row;
+    border: 1px solid black;
+    width: 100%;
+    height: auto;
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+  button{
+    border-radius: 2%;
+    background-color: cadetblue;
+    color: aliceblue;
+    font-size: 40px;
+  }
+  #counter{
+    margin: 0 auto; text-align: center; max-width: 200px; font-size: 40px; font-weight: bold; background-color: aliceblue; border: 1px solid blue;
+  }
+  input{
+    font-size: 25px;
+  }
+  label{
+    color: rgb(16, 8, 46);
+    font-weight: bolder;
+  }
+  #data
+  {
+
+  }
+  .daba
+  {
+    font-size: 30px;
+    color: rgb(32, 7, 63);
+    text-align: center;
+  }
+  #paraadd{
+    display: none;
+  }
+  /* Chapter 53 to 58 */
+  /* Question 1 */
+  .images{
+    position: fixed;
+    z-index: 1;
+    width: 90%;
+    height: 90%;
+    top: 5%;
+    border-radius: 5%;
+    border: 2px solid green;
+    box-shadow: 2px 2px 2px green;
+    left: 5%;
+  }
+  .imagesC{
+    width: 300px;
+    height: 300px;
+    position: relative;
+  }
+  #imagesO{
+    width: 300px;
+    height: 300px;
+    position: relative;
+  }
+  #btnpic{
+    background-color: red;
+    width: fit-content;
+    border-radius: 10%;
+    position: fixed;
+    z-index: 2;
+    top: 10%;
+    left: 10%;
+    display: none;
+  }
+  #closeTheImage
+  {
+      display: none;
+  }
+  /* Chapter 53 to 58 */

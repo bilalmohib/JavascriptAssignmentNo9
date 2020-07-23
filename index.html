@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment # 9 JS Ch 1 to 67</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Roll No:WM6613<br>Muhammad Bilal</h1>
+
+<!-- CHAPTER 43 to 48 -->
+<!-- question 1 -->
+<!-- 1. Show an alert box on click on a link -->
+<a href="#" onClick="alert('Aoa Sir this is chapter 43 Question no:1');">Click on link to see alert</a>
+<!-- CHAPTER 43 to 48 -->
+
+
+<!-- CHAPTER 43 to 48 -->
+<!-- question 2 -->
+<!-- 2. Display some Mobile images in browser. On click on an image Show the message in aImages/pic2.jfiflert 
+    to user.-->
+    <div id="contaImages/pic2.jfifiImages/pic2.jfifner">
+        <img src="Images/pic1.jfif" onclick="greet()" alt="">
+        <img src="Images/pic2.jfif" onclick="greet()" alt="">
+        <img src="Images/pic3.jfif" onclick="greet()" alt="">
+        <img src="Images/pic4.jfif" onclick="greet()" alt="">
+    </div>
+<!-- CHAPTER 43 to 48 -->
+
+
+<!-- CHAPTER 43 to 48 -->
+<!-- question 3 -->
+<!-- 3. Display 10 student records in table and each row should contain a delete
+button. If you click on a button to delete a record, entire row should be
+deleted -->
+<table style="min-width:100%">
+    <tr>
+        <th>Index</th>
+        <th>Name</th>
+        <th>Class</th>
+    </tr>
+    <tr class="tr">
+        <td>0</td>
+        <td>Bilal Me</td>
+        <td>1</td>
+        <td><button onclick="deleteRow()">Delete</button></td>
+    </tr>
+    <tr class="tr">
+        <td>1</td>
+        <td>Ammar Brother</td>
+        <td>2nd</td>
+        <td><button onclick="deleteRow()">Delete</button></td>
+    </tr>
+    <tr class="tr">
+        <td>2</td>
+        <td>Ali Sir</td>
+        <td>3rd</td>
+        <td><button onclick="deleteRow()">Delete</button></td>
+    </tr>
+    <tr class="tr">
+        <td>3</td>
+        <td>Basit Sir</td>
+        <td>4rth</td>
+        <td><button onclick="deleteRow()">Delete</button></td>
+    </tr>
+</table>
+
+<!-- CHAPTER 43 to 48 -->
+
+
+<!-- CHAPTER 43 to 48 -->
+<!-- question 4 -->
+<!-- 4. Display an image in browser. Change the picture on mouseover and set the
+first picture on mouseout.-->
+<img style="text-align: center;" min-width="500px" height="500px" src="Images/quaid.png" onMouseover="src='Images/quaid1.jpg'" onmouseout="src='Images/quaid.png'">
+<!-- question 4 -->
+
+
+<!-- CHAPTER 43 to 48 -->
+
+
+
+
+<!-- CHAPTER 43 to 48 -->
+<!-- question 5 -->
+<!-- 5. Show a counter in browser. Counter should increase on click on increase
+button and decrease on click on decrease button. And show updated counter
+value in browser.-->
+
+<div id="counter">0</div>
+<div style="text-align: center;">
+<button onclick="increase()">Increase</button>
+<button onclick="decrease()">Decrease</button>
+</div>
+<!-- question 4 -->
+<!-- CHAPTER 43 to 48 -->
+
+
+
+<!-- CHAPTER 49 to 52 -->
+<!-- question 1 -->
+<!-- 1. Create a signup form and display form data in your web
+page on submission.-->
+<form action="action.html">
+<fieldset style="width: fit-content; margin: 0 auto; font-size: 30px;">
+    <legend>Sign Up Form</legend>
+    <label>Email:<br />
+    <input type="text" name="email" required id="email"/></label><br />
+    <label>Password<br />
+    <input type="text" name="password" required id="password"/></label><br>
+    <label>Mobile:<br />
+    <input type="text" name="mobile" required id="mobile"/></label><br />
+    <label>Telephone:<br />
+    <input type="text" name="telephone" required id="telephone"/></label><br> 
+    <input type="submit" value="Submit" onclick="getData()">
+</fieldset>
+</form>
+<!-- question 1 -->
+<!-- CHAPTER 49 to 52 -->
+
+
+
+<!-- question 2
+ 2. Suppose in your webpage there is content area in which
+ you have entered your item details, but user can only see
+ some details on first look. When user clicks on “Read
+ more” button, full detail of that particular item will be
+ displayed.  -->
+<p id="para1">The Pakistan is a beautifull country.Pakistan has 5 provinces and
+    <a href="javascript:void(0);" onclick="more()">Read More</a>
+</p>
+<p id="paraadd">The Pakistan is a beautifull country.Pakistan has 5 provinces and Its a very beautifull country Long Live Pakistan</p>
+            
+
+<!-- CHAPTER 49 to 52 -->
+
+
+
+<!-- question 3-->
+ <!-- 3. In previous assignment you have created a tabular data
+ using javascript. Let’s modify that. Create a form which
+ takes student’s details and show each student detail in
+ table. Each row of table must contain a delete button and
+ an edit button. On click on delete button entire row should
+ be deleted. On click on edit button, a hidden form will
+ appear with the values of that row. -->
+ <form>
+    <fieldset style="width: fit-content; margin: 0 auto; font-size: 30px;">
+        <legend>User data Form</legend>
+        <label>Email:<br />
+        <input type="text" name="email" required id="email"/></label><br />
+        <label>Password<br />
+        <input type="text" name="password" required id="password"/></label><br>
+        <label>Mobile:<br />
+        <input type="text" name="mobile" required id="mobile"/></label><br />
+        <label>Education<br />
+        <input type="text" name="telephone" required id="education"/></label><br> 
+       </fieldset>
+    </form>
+
+<!-- question3 -->
+<table id="myTable" style="min-width:100%">
+    <tr>
+        <th>Email</th>
+        <th>Password</th>
+        <th>Mobile</th>
+        <th>Education</th>
+    </tr>
+    <tr>
+        <td>bilalmohib7896@gmail.com</td>
+        <td>BasitAliMughalGhous</td>
+        <td>03081511889</td>
+        <td>BCS continue..</td>
+        <td><button onclick="deleteRowAgain()">Delete</button></td>     
+        <td><button onclick="editRow()">Edit</button></td>     
+    </tr>
+</table>
+<button type="button" onclick="getDataAgain()">Try it</button> 
+<!-- CHAPTER 49 to 52 -->
+
+
+<!-- CHAPTER 53 to 58 -->
+
+<div>
+    <img id="img1" width="300px" height="300px" onclick="bigImage1()" src="Images/11.jpg" alt="">
+    <img id="img2" width="300px" height="300px" onclick="bigImage2()" src="Images/12.jpg" alt="">
+    <img id="img3" width="300px" height="300px" onclick="bigImage3()" src="Images/13.jpg" alt="">
+    <img id="img4" width="300px" height="300px" onclick="bigImage4()" src="Images/14.png" alt="">
+    <button onclick="closeImage()" id="btnpic">CloseImage</button>
+</div>
+
+
+<!-- question2 -->
+<!-- 2. Create a paragraph and two buttons “zoom in ”(+) and “zoom out”(-).
+ On each click on “zoom in”(+) , add 10px in font size of paragraph.
+And on each click on “zoom out”(-) , minus 10px in font size of paragraph -->
+<p id="zoom">Use the two buttons to zoom me in and out</p>
+<button onclick="ZoomIn()">Zoom In</button>&nbsp;&nbsp;&nbsp;&nbsp;<button onclick="ZoomOut()">Zoom Out</button>
+<!-- CHAPTER 53 to 58 -->
+
+<!-- CHAPTER 58 to 67 -->
+
+<!-- question 1 -->
+<!-- i. Get element of id “main-content” and assign them in a variable.
+ii. Display all child elements of “main-content” element.
+iii. Get all elements of class “render” and show their innerHTML
+in browser.
+iv. Fill input value whose element id first-name using javascript.
+v. Repeat part iv for id ”last-name” and “email”. -->
+<div>
+    <h1>DOM</h1>
+    <div id="form-content" class="content"
+    ><label for="first-name">First Name</label>
+    <input type="text" id="first-name"/>
+    <label for="last-name">Last Name</label>
+    <input type="text" id="last-name"/>
+    <label for="email">Email</label>
+    <input type="text" id="email" />
+    </div>
+    <div id="main-content" class="content">
+    <p class="render">First Name : Alex</p>
+    <p class="render" id="lastName">Last Name: Bank</p>
+    <p class="render"> Email : alexbank@example.com</p>
+    <p class="render"> Country : Pakistan </p>
+    <p class="render"> contact : +92 300 1234567</p>
+    </div>
+</div>
+
+
+<!-- question 2 -->
+
+
+
+<!-- CHAPTER 58 to 67 -->
+
+<script src="app.js"></script>
+</body>
+
+</html>
