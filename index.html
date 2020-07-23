@@ -146,38 +146,34 @@ page on submission.-->
  an edit button. On click on delete button entire row should
  be deleted. On click on edit button, a hidden form will
  appear with the values of that row. -->
- <form>
-    <fieldset style="width: fit-content; margin: 0 auto; font-size: 30px;">
-        <legend>User data Form</legend>
-        <label>Email:<br />
-        <input type="text" name="email" required id="email"/></label><br />
-        <label>Password<br />
-        <input type="text" name="password" required id="password"/></label><br>
-        <label>Mobile:<br />
-        <input type="text" name="mobile" required id="mobile"/></label><br />
-        <label>Education<br />
-        <input type="text" name="telephone" required id="education"/></label><br> 
-       </fieldset>
-    </form>
+ <h1>Chat App</h1>
+ <form id="contactForm" action="index.html"> 
+     <fieldset> 
+         <legend>Message</legend> 
+     <span>Name : </span><input placeholder="Enter your name..." id="name" required type="text"><br>
+     <span>Email : </span><input placeholder="Enter your email..." id="email" required type="text"><br>
+     <span>Your Message : <br></span><textarea id="message" name="comments" >Enter your comments...</textarea>
+     <br>
+     <button id="btn" type="submit" onclick="sendMesssage()">Submit</button>
+ </fieldset>
+ </form>
+ 
+ <!-- second part -->
+ <p>
+   <ol style="width: 100%; border: 1px solid black; color: blue; " id="scoreList">
+    <span>Comments
+    </span>
+   </ol>
+ </p>  
+ 
+ 
+ 
+   <!-- second part -->
+ 
+   
+ <!-- The core Firebase JS SDK is always required and must be listed first --> 
+ <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase.js"></script>
 
-<!-- question3 -->
-<table id="myTable" style="min-width:100%">
-    <tr>
-        <th>Email</th>
-        <th>Password</th>
-        <th>Mobile</th>
-        <th>Education</th>
-    </tr>
-    <tr>
-        <td>bilalmohib7896@gmail.com</td>
-        <td>BasitAliMughalGhous</td>
-        <td>03081511889</td>
-        <td>BCS continue..</td>
-        <td><button onclick="deleteRowAgain()">Delete</button></td>     
-        <td><button onclick="editRow()">Edit</button></td>     
-    </tr>
-</table>
-<button type="button" onclick="getDataAgain()">Try it</button> 
 <!-- CHAPTER 49 to 52 -->
 
 
@@ -212,25 +208,32 @@ v. Repeat part iv for id ”last-name” and “email”. -->
 <div>
     <h1>DOM</h1>
     <div id="form-content" class="content"
-    ><label for="first-name">First Name</label>
-    <input type="text" id="first-name"/>
-    <label for="last-name">Last Name</label>
-    <input type="text" id="last-name"/>
-    <label for="email">Email</label>
-    <input type="text" id="email" />
+    ><label for="first-name">First Name</label
+    ><input type="text" id="first-name"
+    /><label for="last-name">Last Name</label
+    ><input type="text" id="last-name"
+    /><label for="email">Email</label
+    ><input type="text" id="emailin" />
     </div>
-    <div id="main-content" class="content">
-    <p class="render">First Name : Alex</p>
-    <p class="render" id="lastName">Last Name: Bank</p>
-    <p class="render"> Email : alexbank@example.com</p>
-    <p class="render"> Country : Pakistan </p>
-    <p class="render"> contact : +92 300 1234567</p>
+    <div id="main-content" class="content"
+    ><p class="render">First Name : Alex</p
+    ><p class="render" id="lastName">Last Name: Bank</p
+    ><p class="render"> Email : alexbank@example.com</p
+    ><p class="render"> Country : Pakistan </p
+    ><p class="render"> contact : +92 300 1234567</p>
     </div>
 </div>
 
 
 <!-- question 2 -->
 
+<!-- 2. use HTML code of question 1 and show the result on browser.
+i. What is node type of element having id “form-content”.
+ii. Show node type of element having id “lastName” and its child node.
+iii. Update child node of element having id “lastName”.
+iv. Get First and last child of id “main-content”.
+v. Get next and previous siblings of id “lastName”.
+vi. Get parent node and node type of element having id “email” -->
 
 
 <!-- CHAPTER 58 to 67 -->

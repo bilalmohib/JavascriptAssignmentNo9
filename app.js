@@ -3025,44 +3025,98 @@ function more()
 //  an edit button. On click on delete button entire row should
 //  be deleted. On click on edit button, a hidden form will
 //  appear with the values of that row.
-// function getDataAgain()
-// {
-    //gettting the values
-    // var email = document.getElementById("emails").value;
-    // var password= document.getElementById("passwords").value; 
-    // var education= document.getElementById("educations").value; 
-    // var mobile= document.getElementById("mobiles").value; 
-    //saving the values in local storage
-    // localStorage.setItem("txtValue", email);
-    // localStorage.setItem("txtValue1", password);
-    // localStorage.setItem("txtValue2", mobile);
-    // localStorage.setItem("txtValue3", telephone);
-   
-    //showing data in table
-// var table = document.getElementById("myTable");
-// var row = table.insertRow(0);
-// var cell1 = row.insertCell(0);
-// var cell2 = row.insertCell(1);
-// cell1.innerHTML = "NEW CELL1";
-// cell2.innerHTML = "NEW CELL2";
+ // Your web app's Firebase configuration
+ // Your web app's Firebase configuration
+ const firebaseConfig = {
+    apiKey: "AIzaSyDYUyz4xKFnmzFZL53k9_s2652AWh8AxFw",
+    authDomain: "chat-application-27ab4.firebaseapp.com",
+    databaseURL: "https://chat-application-27ab4.firebaseio.com",
+    projectId: "chat-application-27ab4",
+    storageBucket: "chat-application-27ab4.appspot.com",
+    messagingSenderId: "433296968616",
+    appId: "1:433296968616:web:020defb862c1bd5af02b9d",
+    measurementId: "G-19ZPF0TWCM"
+  }; 
 
-// }
+    // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
 
 
-// function deleteRowAgain()
-// {
-//     var td =event.target.parentNode; 
-//     var tr = td.parentNode; // the row to be removed
-//     tr.parentNode.removeChild(tr);
-// }
+   var database = firebase.database();
 
-// function editRow()
-// {
-//     var td =event.target.parentNode; 
-//     var tr = td.parentNode; // the row to be removed
-//     tr.parentNode.removeChild(tr);
-// }
+  function sendMesssage()
+  {
+    var today = new Date();
+    var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+    var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+    var dateTime = date+' '+time;
+    dateTime=dateTime.toString();
 
+
+      var email=document.getElementById("email").value;
+      var name=document.getElementById("name").value;
+      var comment=document.getElementById("message").value;
+console.log(email+name+comment+dateTime)
+      var newMessageKey = database.ref().child('comments').push().key;
+      database.ref('comments/'+newMessageKey+'/email').set(email);
+      database.ref('comments/'+newMessageKey+'/name').set(name);
+      database.ref('comments/'+newMessageKey+'/comment').set(comment);
+      database.ref('comments/'+newMessageKey+'/date').set(dateTime);
+  }
+
+// Listen for form submit
+document.getElementById('contactForm').addEventListener('submit', submitForm);
+  
+// Submit form
+function submitForm(e){
+  e.preventDefault();
+
+
+  // Show alert
+  document.querySelector('.alert').style.display = 'block';
+  
+  // Hide alert after 3 seconds
+  setTimeout(function(){
+    document.querySelector('.alert').style.display = 'none';
+  },3000);
+
+}
+
+
+//This is the perfect way to retrieve data leaving all the dull ways of youtubers now
+var leadsRef = database.ref('comments');
+leadsRef.on('value', function(snapshot) {
+    snapshot.forEach(function(childSnapshot) {
+      var childData = childSnapshot.val();
+      // console.log(childData.email)
+
+var name = document.createTextNode('Name: ' + childData.name);
+var email = document.createTextNode('Email: ' + childData.email);
+var comment = document.createTextNode('Comment : ' + childData.comment);
+var date = document.createTextNode('Date: ' + childData.date);
+
+
+
+
+var ult = document.getElementById("scoreList");
+var lit = document.createElement("li");
+lit.setAttribute('class','uls');
+lit.appendChild(name);
+lit.appendChild(document.createElement('br'));
+lit.appendChild(email);
+lit.appendChild(document.createElement('br'));
+lit.appendChild(comment);
+lit.appendChild(document.createElement('br'));
+lit.appendChild(date);
+lit.appendChild(document.createElement('br'));
+ult.appendChild(lit);
+
+
+
+//Hey this is
+    });
+});
 //CHAPTER 49 to 52
 
 
@@ -3177,9 +3231,46 @@ for (var i = 0; i < mc.children.length; i++) {
 }
 // iv. Fill input value whose element id first-name using javascript.
 var inp=document.getElementById("form-content");
-console.log(inp.childNodes[0].children.value="kjhkjhkjh");
+// inp.childNodes[0].value="IsatAvalue";
+// console.log(inp.childNodes[0].value);
+//inp.value="Bilal";
+var input=document.getElementById("first-name");
+input.value="Bilal";
 // v. Repeat part iv for id ”last-name” and “email”.
-
+var input1=document.getElementById("last-name");
+input1.value="Mohib";
+var input2=document.getElementById("emailin");
+input2.value="bilalmohib7896@gmail.com";
+//question 2
+// 2. use HTML code of question 1 and show the result on browser.
+for (var i = 0; i < mc.childNodes.length; i++) {
+    document.write(mc.children[i]);
+  }
+  var mc=document.getElementById("main-content");
+var book = document.getElementsByClassName("render");
+for (var i = 0; i < mc.children.length; i++) {
+  document.write(book[i].childNodes[0])
+}
+// i. What is node type of element having id “form-content”.
+//It is child Node
+var type=document.getElementById("form-content");
+console.log(type.childNodes[0]);
+// ii. Show node type of element having id “lastName” and its child node.
+var type1=document.getElementById("form-content");
+console.log(type1.childNodes[2]);
+// iii. Update child node of element having id “lastName”.
+type1.childNodes[2].value="sdaf";
+// iv. Get First and last child of id “main-content”.
+var type3=document.getElementById("main-content");
+console.log(type3.childNodes[0]);
+console.log(type3.childNodes[4]);
+// v. Get next and previous siblings of id “lastName”.
+var type5=document.getElementById("form-content");
+console.log(type5.childNodes[4]);
+console.log(type5.childNodes[1]);
+// vi. Get parent node and node type of element having id “email”
+console.log(type5.childNodes[4].parentNode);
+console.log(type5.childNodes[4].nodeType);
 
 
 
